@@ -11,4 +11,9 @@ on:
       job-one:
 
       job-two:
+        needs: job-one
+
+      job-three:
+        needs: [job-one, job-two]
+
  
