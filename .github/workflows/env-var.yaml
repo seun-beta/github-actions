@@ -15,6 +15,8 @@ jobs:
       JOB_VARIABLE: "This is my job variable!"
     
     steps:
+      - uses: actions/checkout@v2
+
       - name: print all the environment variables 
         env: 
           STEP_VARIABLE: "A step variable................"
