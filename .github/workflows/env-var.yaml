@@ -1,0 +1,25 @@
+name: Enviroment Variables Tutorial
+
+env:
+  WORKFLOW_VARIABLE: "Workflow variables can be accessed anywhere in the workflow!"
+
+on:
+  push: 
+    branches: [ main ]
+  workflow_dispatch:
+  
+jobs:
+  environment-variables:
+    runs-on: ubuntu-latest
+    env: 
+      JOB_VARIABLE: "This is my job variable!"
+    
+    steps:
+      - name: print all the environment variables 
+        env: 
+          STEP_VARIABLE: "A step variable................"
+        run: |
+          echo Here are my custom environment Variables
+          echo $WORKFLOW_VARIABLE
+          echo $JOB_VARIABLE
+          echo $STEP_VARIABLE
