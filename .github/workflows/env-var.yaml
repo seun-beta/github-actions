@@ -1,8 +1,7 @@
 name: Enviroment Variables Tutorial
 
 env:
-  WORKFLOW_VARIABLE: "Workflow variables can be accessed anywhere in the workflow!"
-env: 
+  WORKFLOW_VARIABLE: "Workflow variables can be accessed anywhere in the workflow!" 
   ANOTHER_WORKFLOW_VARIABLE: "Just for testing"
 
 on:
