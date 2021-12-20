@@ -2,6 +2,8 @@ name: Enviroment Variables Tutorial
 
 env:
   WORKFLOW_VARIABLE: "Workflow variables can be accessed anywhere in the workflow!"
+env: 
+  ANOTHER_WORKFLOW_VARIABLE: "Just for testing"
 
 on:
   push: 
@@ -22,6 +24,7 @@ jobs:
           STEP_VARIABLE: "A step variable................"
         run: |
           echo Here are my custom environment Variables
+          echo $ANOTHER_WORKFLOW_VARIABLE
           echo $WORKFLOW_VARIABLE
           echo $JOB_VARIABLE
           echo $STEP_VARIABLE
