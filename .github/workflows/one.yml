@@ -2,13 +2,15 @@ name: Workflow One
 
 on:
   push:
-    branches: [ main, staging ]
+    branches: 
+      - main
   pull_request:
-    branches: [ main, staging ] 
+    branches:
+      - staging
   workflow_dispatch:
 
 jobs:
-  One-Build:
+  build-one:
     runs-on: ubuntu-latest
 
     steps:
